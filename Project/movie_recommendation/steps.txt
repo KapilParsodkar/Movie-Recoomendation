@@ -1,0 +1,69 @@
+Start application on Local
+==========================
+
+Step1: 
+cd ~/Desktop/Project/movie_recommendation
+-------------------------------------------
+
+step2: start application
+docker-compose down -v
+-------------------------------------------
+
+step3: start application
+docker-compose up -V -d
+-------------------------------------------
+
+step4: stop application
+docker-compose down -v
+-------------------------------------------
+
+
+Start application on Instance
+++++++++++++++++++++++++++++++++++++++++++
+
+Step1: Login to AWS
+
+Step2: Search and select EC2
+
+Step3: Go to Instance (running) -> clear filter
+
+Step4: Tick
+
+Step5: Instance State -> Start Instance
+
+Step6: Connect
+
+Step7: Go to SSH client tab
+
+Step8: copy example command
+ssh -i "mnt.pem" ubuntu@ec2-54-188-46-33.us-west-2.compute.amazonaws.com
+
+step9: Go to .pem file folder (cd ~/Desktop)
+
+step10: chmod 400 recomm_movie_system.pem
+
+step11: copy paste step 8 content
+ssh -i "mnt.pem" ubuntu@ec2-54-188-46-33.us-west-2.compute.amazonaws.com
+
+step12: yes
+
+Step13: cd ~/movie_recommendation
+
+step14: start application
+docker-compose down -v
+
+step15: start application
+docker-compose up -V -d
+
+step16: Copy Ip address of Connect -> EC2 Instance Connect
+54.188.46.33
+
+step17: Paste Ip address in browser
+
+step18: stop application
+docker-compose down -v
+
+
+Note: Start local system first (step1,2,3) and then start instance
+
+
